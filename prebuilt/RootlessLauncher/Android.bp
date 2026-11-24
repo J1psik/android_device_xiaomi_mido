@@ -1,9 +1,0 @@
-android_app_import {
-    name: "RootlessLauncher",
-    apk: "RootlessLauncher.apk",
-    presigned: true,
-    dex_preopt: {
-        enabled: false,
-    },
-    overrides: ["Backgrounds", "Updater"],
-}

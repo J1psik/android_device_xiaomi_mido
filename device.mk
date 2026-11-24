@@ -424,9 +424,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/bootanimation.zip:$(TARGET_COPY_OUT_PRODUCT)/media/bootanimation.zip
 
-# Custom Default Launcher (RootlessLauncher)
 PRODUCT_PACKAGES += \
-    RootlessLauncher
 
 # C4xOS Bundled Wallpapers
 PRODUCT_COPY_FILES += \
@@ -436,4 +434,18 @@ PRODUCT_COPY_FILES += \
 
 # Pure AOSP QuickStep Service for Recents/Overview button
 PRODUCT_PACKAGES += \
-    TrebuchetQuickStep
+
+# Stock AOSP Camera
+PRODUCT_PACKAGES += \
+    Camera2
+
+# Remove unwanted LineageOS packages
+PRODUCT_PACKAGES_OVERRIDES += \
+    Backgrounds \
+    Updater \
+    Snap \
+    Recorder \
+    Eleven \
+    Music \
+    Jelly \
+    Browser2
