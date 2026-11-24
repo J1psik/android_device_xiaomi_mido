@@ -420,3 +420,20 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf \
     $(LOCAL_PATH)/wifi/WCNSS_cfg.dat:$(TARGET_COPY_OUT_SYSTEM)/etc/firmware/wlan/prima/WCNSS_cfg.dat \
     $(LOCAL_PATH)/wifi/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/WCNSS_qcom_cfg.ini
+# Custom C4xOS Boot Animation
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/bootanimation.zip:$(TARGET_COPY_OUT_PRODUCT)/media/bootanimation.zip
+
+# Custom Default Launcher (RootlessLauncher)
+PRODUCT_PACKAGES += \
+    RootlessLauncher
+
+# C4xOS Bundled Wallpapers
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/prebuilt/wallpapers/wallpaperC4x-1.jpg:$(TARGET_COPY_OUT_PRODUCT)/media/wallpapers/wallpaperC4x-1.jpg \
+    $(LOCAL_PATH)/prebuilt/wallpapers/wallpaperC4x-2.jpg:$(TARGET_COPY_OUT_PRODUCT)/media/wallpapers/wallpaperC4x-2.jpg \
+    $(LOCAL_PATH)/prebuilt/wallpapers/wallpaperC4x-3.jpg:$(TARGET_COPY_OUT_PRODUCT)/media/wallpapers/wallpaperC4x-3.jpg
+
+# Pure AOSP QuickStep Service for Recents/Overview button
+PRODUCT_PACKAGES += \
+    TrebuchetQuickStep

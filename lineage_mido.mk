@@ -40,3 +40,16 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 
 # Set BUILD_FINGERPRINT variable to be picked up by both system and vendor build.prop
 BUILD_FINGERPRINT := "xiaomi/mido/mido:7.0/NRD90M/V9.6.1.0.NCFMIFD:user/release-keys"
+
+# Custom OS Branding
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.build.display.id=C4xOS-1.0-mido \
+    ro.lineage.maintainer=platoha
+
+# Custom OS Version in About Phone
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.lineage.display.version=C4xOS-1.0-mido
+
+# Disable LineageOS Stats by default
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.lineage.stats.enable=false
